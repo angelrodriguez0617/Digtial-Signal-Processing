@@ -1,0 +1,239 @@
+******************************************************************************
+              TMS320C55x Linker PC v4.4.1                      
+******************************************************************************
+>> Linked Wed Nov 09 09:46:49 2022
+
+OUTPUT FILE NAME:   <Convolution2.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000106aa
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+                        (bytes)   (bytes)    (bytes)   (bytes)
+----------------------  --------  ---------  --------  --------  ----  --------
+  MMR                   00000000   000000c0  00000000  000000c0  RWIX
+  DARAM0                000000c0   00001f40  00001dec  00000154  RWIX
+  DARAM1                00002000   00002000  00001d12  000002ee  RWIX
+  DARAM2                00004000   00002000  00000000  00002000  RWIX
+  DARAM3                00006000   00002000  00000000  00002000  RWIX
+  DARAM4                00008000   00002000  00000400  00001c00  RWIX
+  DARAM5                0000a000   00002000  0000001c  00001fe4  RWIX
+  DARAM6                0000c000   00002000  00000000  00002000  RWIX
+  DARAM7                0000e000   00002000  00000000  00002000  RWIX
+  SARAM0                00010000   00002000  000006fa  00001906  RWIX
+  SARAM1                00012000   00002000  00000000  00002000  RWIX
+  SARAM2                00014000   00002000  00000000  00002000  RWIX
+  SARAM3                00016000   00002000  00000000  00002000  RWIX
+  SARAM4                00018000   00002000  00000000  00002000  RWIX
+  SARAM5                0001a000   00002000  00000000  00002000  RWIX
+  SARAM6                0001c000   00002000  00000000  00002000  RWIX
+  SARAM7                0001e000   00002000  00000000  00002000  RWIX
+  SARAM8                00020000   00002000  00000000  00002000  RWIX
+  SARAM9                00022000   00002000  00000000  00002000  RWIX
+  SARAM10               00024000   00002000  00000000  00002000  RWIX
+  SARAM11               00026000   00002000  00000000  00002000  RWIX
+  SARAM12               00028000   00002000  00000000  00002000  RWIX
+  SARAM13               0002a000   00002000  00000000  00002000  RWIX
+  SARAM14               0002c000   00002000  00000000  00002000  RWIX
+  SARAM15               0002e000   00002000  00000000  00002000  RWIX
+  SARAM16               00030000   00002000  00000000  00002000  RWIX
+  SARAM17               00032000   00002000  00000000  00002000  RWIX
+  SARAM18               00034000   00002000  00000000  00002000  RWIX
+  SARAM19               00036000   00002000  00000000  00002000  RWIX
+  SARAM20               00038000   00002000  00000000  00002000  RWIX
+  SARAM21               0003a000   00002000  00000000  00002000  RWIX
+  SARAM22               0003c000   00002000  00000000  00002000  RWIX
+  SARAM23               0003e000   00002000  00000000  00002000  RWIX
+  CE0                   00040000   003c0000  00000000  003c0000  RWIX
+  CE1                   00400000   00400000  00000000  00400000  RWIX
+  CE2                   00800000   00400000  00000000  00400000  RWIX
+  CE3                   00c00000   003f0000  00000000  003f0000  RWIX
+  ROM                   00ff0000   0000ff00  00000000  0000ff00  RWIX
+  VECS                  00ffff00   00000100  00000100  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+.stack       0   [ 000000c0 ]  00000060          *   00000100   UNINITIALIZED
+                 [ 000000c0 ]  00000060          *   00000100   --HOLE--
+
+.sysstack 
+*            0   [ 000002c0 ]  00000160          *   00000100   UNINITIALIZED
+                 [ 000002c0 ]  00000160          *   00000100   --HOLE--
+
+.cinit       0   [ 000004c0 ]  00000260          *   00000019   
+                 [ 000004c0 ]  00000260          *   0000000a   rts55x.lib : _lock.obj (.cinit)
+                 [ 000004d4 ]  0000026a          *   0000000a              : exit.obj (.cinit)
+                 [ 000004e8 ]  00000274          *   00000004              : memory.obj (.cinit)
+                 [ 000004f0 ]  00000278          *   00000001   --HOLE-- [fill = 0]
+
+.const       0   [ 000004f2 ]  00000279          *   00000008   
+                 [ 000004f2 ]  00000279          *   00000005   main.obj (.const:_$P$T0$1)
+                 [ 000004fc ]  0000027e          *   00000003   main.obj (.const:_$P$T1$2)
+
+MEM2         0   [ 00000502 ]  00000281          *   00000cd5   
+                 [ 00000502 ]  00000281          *   00000cd5   impulse.obj (MEM2)
+
+MEM3         0   [ 00002000 ]  00001000          *   00000e89   
+                 [ 00002000 ]  00001000          *   00000e89   audio_with_echo.obj (MEM3)
+
+.sysmem      0   [ 00008000 ]  00004000          *   00000200   UNINITIALIZED
+                 [ 00008000 ]  00004000          *   00000200   --HOLE--
+
+.data        0   [ 00008000 ]  00004000          *   00000000   UNINITIALIZED
+
+.bss         0   [ 0000a000 ]  00005000          *   0000000e   UNINITIALIZED
+                 [ 0000a000 ]  00005000          *   00000006   rts55x.lib : memory.obj (.bss)
+                 [ 0000a00c ]  00005006          *   00000004              : _lock.obj (.bss)
+                 [ 0000a014 ]  0000500a          *   00000004              : exit.obj (.bss)
+
+.text        0     00010000  [ 00008000 ] 000006fa          *   
+                   00010000  [ 00008000 ] 000004b5          *   rts55x.lib : memory.obj (.text)
+                   000104b5  [ 0000825a+] 000000e0          *   main.obj (.text)
+                   00010595  [ 000082ca+] 0000004d          *   rts55x.lib : autoinit.obj (.text)
+                   000105e2  [ 000082f1 ] 0000004b          *              : args_main.obj (.text)
+                   0001062d  [ 00008316+] 0000003f          *              : memcpy.obj (.text)
+                   0001066c  [ 00008336 ] 0000003e          *              : exit.obj (.text)
+                   000106aa  [ 00008355 ] 00000034          *              : boot.obj (.text)
+                   000106de  [ 0000836f ] 00000012          *              : _lock.obj (.text)
+                   000106f0  [ 00008378 ] 00000007          *              : exit.obj (.text:CIO_breakpoint)
+                   000106f7  [ 0000837b+] 00000002          *              : vectors.obj (.text)
+                   000106f9  [ 0000837c ] 00000001          *   --HOLE-- [fill = 20]
+
+vectors      0     00ffff00  [ 007fff80 ] 00000100          *   NOLOAD SECTION
+                   00ffff00  [ 007fff80 ] 00000100          *   rts55x.lib : vectors.obj (vectors)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000001                $TI_capability_requires_rev2
+            00005000    .bss
+            00004000    .data
+ffffffff                .text
+000106f1                C$$EXIT
+00ffff00                _Reset
+            00000160    __STACK_END
+00000200                __STACK_SIZE
+00000400                __SYSMEM_SIZE
+00000200                __SYSSTACK_SIZE
+00000001                __TI_args_main
+ffffffff                ___binit__
+            00005000    ___bss__
+ffffffff                ___c_args__
+            00000260    ___cinit__
+            00004000    ___data__
+            00004000    ___edata__
+            0000500e    ___end__
+ffffffff                ___etext__
+ffffffff                ___pinit__
+ffffffff                ___text__
+000105e2                __args_main
+            0000500a    __cleanup_ptr
+            0000500c    __dtors_ptr
+            00005006    __lock
+000106ee                __nop
+000106e6                __register_lock
+000106de                __register_unlock
+            00000060    __stack
+            00004000    __sys_memory
+            00000160    __sysstack
+            00005008    __unlock
+000106f0                _abort
+            00001000    _audio_with_echo
+00010595                _auto_init
+000106aa                _c_int00
+0001048f                _calloc
+00010487                _chkheap
+000104fe                _conv
+0001066c                _exit
+00010000                _free
+00010431                _free_memory
+            00000281    _impulse
+000104b5                _main
+00010131                _malloc
+000103d7                _max_free
+0001062d                _memcpy
+000100cc                _minit
+00010226                _realloc
+ffffffff                binit
+            00000260    cinit
+            00004000    edata
+            0000500e    end
+ffffffff                etext
+ffffffff                pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000001                $TI_capability_requires_rev2
+00000001                __TI_args_main
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+            00000060    __stack
+00000200                __STACK_SIZE
+00000200                __SYSSTACK_SIZE
+            00000160    __STACK_END
+            00000160    __sysstack
+00000400                __SYSMEM_SIZE
+            00000260    ___cinit__
+            00000260    cinit
+            00000281    _impulse
+            00001000    _audio_with_echo
+            00004000    .data
+            00004000    ___data__
+            00004000    ___edata__
+            00004000    __sys_memory
+            00004000    edata
+            00005000    .bss
+            00005000    ___bss__
+            00005006    __lock
+            00005008    __unlock
+            0000500a    __cleanup_ptr
+            0000500c    __dtors_ptr
+            0000500e    ___end__
+            0000500e    end
+00010000                _free
+000100cc                _minit
+00010131                _malloc
+00010226                _realloc
+000103d7                _max_free
+00010431                _free_memory
+00010487                _chkheap
+0001048f                _calloc
+000104b5                _main
+000104fe                _conv
+00010595                _auto_init
+000105e2                __args_main
+0001062d                _memcpy
+0001066c                _exit
+000106aa                _c_int00
+000106de                __register_unlock
+000106e6                __register_lock
+000106ee                __nop
+000106f0                _abort
+000106f1                C$$EXIT
+00ffff00                _Reset
+ffffffff                .text
+ffffffff                ___binit__
+ffffffff                ___c_args__
+ffffffff                ___etext__
+ffffffff                ___pinit__
+ffffffff                ___text__
+ffffffff                binit
+ffffffff                etext
+ffffffff                pinit
+
+[57 symbols]

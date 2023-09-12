@@ -1,0 +1,1 @@
+"./audio_with_echo.obj" "./impulse.obj" "./main.obj" "../VC5509.cmd" -llibc.a 
